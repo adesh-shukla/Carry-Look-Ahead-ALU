@@ -1,27 +1,27 @@
-# 🚀 8-bit Carry Look-Ahead ALU (Verilog)
+#  8-bit Carry Look-Ahead ALU (Verilog)
 
 A high-performance **8-bit Arithmetic Logic Unit (ALU)** designed using a **Carry Look-Ahead (CLA) Adder** for fast arithmetic operations. This project demonstrates efficient digital design principles and modular Verilog implementation.
 
 ---
 
-## 📌 Features
+##  Features
 
-* ⚡ **Fast Addition/Subtraction** using Carry Look-Ahead Adder
-* 🔢 Supports **8-bit operations**
-* 🔁 Arithmetic & Logical Operations:
+*  **Fast Addition/Subtraction** using Carry Look-Ahead Adder
+*  Supports **8-bit operations**
+*  Arithmetic & Logical Operations:
 
   * Addition
   * Subtraction
   * Bitwise AND
   * Bitwise OR
   * Bitwise XOR
-* 🧩 Modular design (scalable architecture)
-* 🧪 Fully verified using a testbench
-* 📊 Waveform analysis included
+*  Modular design (scalable architecture)
+*  Fully verified using a testbench
+*  Waveform analysis included
 
 ---
 
-## 🧠 Architecture
+##  Architecture
 
 The ALU is built using:
 
@@ -29,7 +29,7 @@ The ALU is built using:
 * Control logic using `sel` and `sub` signals
 * Separate handling for arithmetic and logical operations
 
-### 🔹 Control Signals
+###  Control Signals
 
 | sel | sub | Operation   |
 | --- | --- | ----------- |
@@ -41,7 +41,7 @@ The ALU is built using:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Carry-Look-Ahead-ALU/
@@ -54,7 +54,7 @@ Carry-Look-Ahead-ALU/
 
 ---
 
-## ▶️ Simulation
+##  Simulation
 
 The design is verified using a Verilog testbench.
 
@@ -66,19 +66,19 @@ The design is verified using a Verilog testbench.
 
 ---
 
-## 📊 Waveform Output
+##  Waveform Output
 
 The waveform verifies correct functionality of all operations:
 
-* ✅ Addition produces correct sum
-* ✅ Subtraction works using two's complement
-* ✅ Logical operations produce expected outputs
+*  Addition produces correct sum
+*  Subtraction works using two's complement
+*  Logical operations produce expected outputs
 
 ![Waveform](8bit_CLA_ALU_waveform.png)
 
 ---
 
-## 💡 Key Concepts Used
+##  Key Concepts Used
 
 * Carry Look-Ahead Logic (Generate & Propagate)
 * Two’s Complement Arithmetic
@@ -87,7 +87,7 @@ The waveform verifies correct functionality of all operations:
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Add **flags** (Zero, Carry, Overflow, Sign)
 * Convert to **parameterized ALU (N-bit scalable)**
@@ -96,7 +96,7 @@ The waveform verifies correct functionality of all operations:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Adesh Shukla**
 
@@ -105,8 +105,8 @@ The waveform verifies correct functionality of all operations:
 
 ---
 
-## ⭐ If you found this useful
+##  If you found this useful
 
-Give this repo a ⭐ and feel free to fork!
+Give this repo a  and feel free to fork!
 
 ---
