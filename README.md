@@ -1,112 +1,98 @@
-#  8-bit Carry Look-Ahead ALU (Verilog)
+# 8-bit Carry Look-Ahead ALU (Verilog)
 
-A high-performance **8-bit Arithmetic Logic Unit (ALU)** designed using a **Carry Look-Ahead (CLA) Adder** for fast arithmetic operations. This project demonstrates efficient digital design principles and modular Verilog implementation.
-
----
-
-##  Features
-
-*  **Fast Addition/Subtraction** using Carry Look-Ahead Adder
-*  Supports **8-bit operations**
-*  Arithmetic & Logical Operations:
-
-  * Addition
-  * Subtraction
-  * Bitwise AND
-  * Bitwise OR
-  * Bitwise XOR
-*  Modular design (scalable architecture)
-*  Fully verified using a testbench
-*  Waveform analysis included
+This project is an implementation of an 8-bit ALU using a Carry Look-Ahead (CLA) Adder in Verilog.  
+The main goal was to understand how faster addition works compared to ripple carry and how different operations can be combined into a single ALU design.
 
 ---
 
-##  Architecture
+## What this project does
 
-The ALU is built using:
+This ALU can perform both arithmetic and logical operations on 8-bit inputs.
 
-* **Carry Look-Ahead Adder (CLA)** for fast carry computation
-* Control logic using `sel` and `sub` signals
-* Separate handling for arithmetic and logical operations
+Operations supported:
+- Addition  
+- Subtraction (using 2’s complement)  
+- Bitwise AND  
+- Bitwise OR  
+- Bitwise XOR  
 
-###  Control Signals
+The arithmetic part is implemented using a CLA adder, so carry is calculated faster instead of waiting for propagation like in ripple carry.
 
-| sel | sub | Operation   |
-| --- | --- | ----------- |
-| 11  | 0   | Addition    |
+---
+
+## How it works (basic idea)
+
+- The ALU takes two 8-bit inputs: a and b  
+- Control signals:  
+  - sel → selects operation  
+  - sub → decides addition or subtraction  
+- For subtraction, b is converted into 2’s complement internally  
+- Logical operations are handled separately  
+
+---
+
+## Control Table
+
+| sel | sub | Operation |
+|-----|-----|----------|
+| 11  | 0   | Addition |
 | 11  | 1   | Subtraction |
-| 01  | 0   | Bitwise OR  |
-| 00  | 0   | Bitwise AND |
-| 10  | 0   | Bitwise XOR |
+| 01  | 0   | OR |
+| 00  | 0   | AND |
+| 10  | 0   | XOR |
 
 ---
 
-##  Project Structure
+## Project Files
 
-```
 Carry-Look-Ahead-ALU/
 │
-├── 8bit_CLA_ALU_design.sv      # Main ALU design
-├── 8bit_CLA_ALU_testbench.sv   # Testbench for verification
-├── 8bit_CLA_ALU_waveform.png   # Simulation waveform
-└── README.md                   # Project documentation
-```
+├── 8bit_CLA_ALU_design.sv  
+├── 8bit_CLA_ALU_testbench.sv  
+├── 8bit_CLA_ALU_waveform.png  
+└── README.md  
 
 ---
 
-##  Simulation
+## Simulation
 
-The design is verified using a Verilog testbench.
+I verified the design using a testbench.
 
-### Steps:
-
-1. Compile the design and testbench
-2. Run simulation
-3. View waveform using GTKWave / EPWave
-
----
-
-##  Waveform Output
-
-The waveform verifies correct functionality of all operations:
-
-*  Addition produces correct sum
-*  Subtraction works using two's complement
-*  Logical operations produce expected outputs
-
-![Waveform](8bit_CLA_ALU_waveform.png)
+Steps:
+1. Compile design + testbench  
+2. Run simulation  
+3. View waveform (GTKWave / EPWave)  
 
 ---
 
-##  Key Concepts Used
+## Output Waveform
 
-* Carry Look-Ahead Logic (Generate & Propagate)
-* Two’s Complement Arithmetic
-* Modular Verilog Design
-* Testbench-based Verification
-
----
-
-##  Future Improvements
-
-* Add **flags** (Zero, Carry, Overflow, Sign)
-* Convert to **parameterized ALU (N-bit scalable)**
-* Integrate into a **simple CPU design**
-* Add **self-checking testbench**
+The waveform shows:
+- Correct sum for addition  
+- Proper subtraction using 2’s complement  
+- Logical operations working as expected  
 
 ---
 
-##  Author
+## What I learned
 
-**Adesh Shukla**
+- How Carry Look-Ahead logic works (Generate & Propagate)  
+- Difference between CLA and ripple carry  
+- Writing modular Verilog code  
+- Basics of writing a testbench and verifying outputs  
 
-* Passionate about Digital Design & VLSI
-* Exploring Verilog, SystemVerilog, and Computer Architecture
+---
+
+## Future improvements
+
+- Add flags (Zero, Carry, Overflow, Sign)  
+- Make it parameterized (so it works for N-bit)  
+- Try integrating it into a simple CPU  
+- Write a self-checking testbench  
 
 ---
 
-##  If you found this useful
+## Author
 
-Give this repo a  and feel free to fork!
-
----
+Adesh Shukla  
+Interested in Digital Design and learning Verilog/SystemVerilog  
