@@ -34,7 +34,7 @@ The arithmetic part is implemented using a CLA adder, so carry is calculated fas
 ## Selection 
 
  sel  sub  Operation 
---------------------
+
  11   0    Addition 
  11   1    Subtraction 
  01   0    OR 
