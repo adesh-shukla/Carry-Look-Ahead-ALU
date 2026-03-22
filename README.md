@@ -45,7 +45,7 @@ The arithmetic part is implemented using a CLA adder, so carry is calculated fas
 
 ## Project Files
 
-Carry-Look-Ahead-ALU/
+Carry-Look-Ahead-ALU
 
  - 8bit_CLA_ALU_design.sv  
  - 8bit_CLA_ALU_testbench.sv  
