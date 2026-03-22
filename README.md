@@ -33,24 +33,24 @@ The arithmetic part is implemented using a CLA adder, so carry is calculated fas
 
 ## Selection 
 
- - sel     sub      Operation 
+ - sel  |   sub   |   Operation 
 
- - 11       0        Addition 
- - 11       1        Subtraction 
- - 01       0        OR 
- - 00       0        AND 
- - 10       0        XOR 
+ - 11   |    0   |   Addition 
+ - 11   |   1    |   Subtraction 
+ - 01   |   0    |   OR 
+ - 00   |   0    |   AND 
+ - 10   |   0    |    XOR 
 
 ---
 
 ## Project Files
 
 Carry-Look-Ahead-ALU/
-│
-├── 8bit_CLA_ALU_design.sv  
-├── 8bit_CLA_ALU_testbench.sv  
-├── 8bit_CLA_ALU_waveform.png  
-└── README.md  
+
+ - 8bit_CLA_ALU_design.sv  
+ - 8bit_CLA_ALU_testbench.sv  
+ - 8bit_CLA_ALU_waveform.png  
+ - README.md  
 
 ---
 
